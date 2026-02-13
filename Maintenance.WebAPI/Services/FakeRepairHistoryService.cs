@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Maintenance.WebAPI.Models;
 
 namespace Maintenance.WebAPI.Services
@@ -9,20 +10,22 @@ namespace Maintenance.WebAPI.Services
     {
         private readonly List<RepairHistoryDto> _repairs = new();
 
-        public List<RepairHistoryDto> GetByVehicleId(int vehicleId)
+        public async Task<List<RepairHistoryDto>> GetByVehicleIdAsync(int vehicleId)
         {
-            return _repairs
-        .Where(r => r.VehicleId == vehicleId)
-        .ToList();
+            return await Task.FromResult(
+                _repairs
+                    .Where(r => r.VehicleId == vehicleId)
+                    .ToList());
         }
-        public void AddRepair(RepairHistoryDto repair)
+        public async Task AddRepairAsync(RepairHistoryDto repair)
         {
             repair.Id = _repairs.Count + 1;
             _repairs.Add(repair);
 
+            await Task.CompletedTask;
         }
 
-        public void UpdateRepair(int id, RepairHistoryDto repair)
+        public async Task UpdateRepairAsync(int id, RepairHistoryDto repair)
         {
             var existing = _repairs.FirstOrDefault(r => r.Id == id);
 
@@ -33,9 +36,11 @@ namespace Maintenance.WebAPI.Services
                 existing.PerformedBy = repair.PerformedBy;
                 existing.RepairDate = repair.RepairDate;
             }
+
+            await Task.CompletedTask;
         }
 
-        public void DeleteRepair(int id)
+        public async Task DeleteRepairAsync(int id)
         {
             var repair = _repairs.FirstOrDefault(r => r.Id == id);
 
@@ -43,8 +48,9 @@ namespace Maintenance.WebAPI.Services
             {
                 _repairs.Remove(repair);
             }
-        }
 
+            await Task.CompletedTask;
+        }
 
     }
 }
