@@ -54,6 +54,24 @@ namespace Maintenance.WebAPI.Controllers
             return CreatedAtAction(nameof(GetByVehicleId), new { vehicleId = vehicleId }, repair);
         }
 
+        [HttpPut("repairs/{id}")]
+        public IActionResult UpdateRepair(int id, [FromBody] RepairHistoryDto repair)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            _service.UpdateRepair(id, repair);
+
+            return NoContent();
+        }
+
+        [HttpDelete("repairs/{id}")]
+        public IActionResult DeleteRepair(int id)
+        {
+            _service.DeleteRepair(id);
+            return NoContent();
+        }
+
 
     }
 }

@@ -7,5 +7,9 @@ namespace Maintenance.WebAPI.Services
     {
         List<RepairHistoryDto> GetByVehicleId(int vehicleId);
         void AddRepair(RepairHistoryDto repair);
+
+        void UpdateRepair(int id, RepairHistoryDto repair);
+
+        void DeleteRepair(int id);
     }
 }

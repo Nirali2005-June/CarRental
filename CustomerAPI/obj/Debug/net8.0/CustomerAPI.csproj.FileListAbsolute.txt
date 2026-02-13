@@ -252,3 +252,4 @@ C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalAppl
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.pdb
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.genruntimeconfig.cache
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\ref\CustomerAPI.dll
+C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.sourcelink.json
