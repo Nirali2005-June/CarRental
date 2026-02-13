@@ -25,32 +25,33 @@ namespace Maintenance.WebAPI.Services
             await Task.CompletedTask;
         }
 
-        public async Task UpdateRepairAsync(int id, RepairHistoryDto repair)
+        public async Task<bool> UpdateRepairAsync(int id, RepairHistoryDto repair)
         {
             var existing = _repairs.FirstOrDefault(r => r.Id == id);
 
-            if (existing != null)
-            {
-                existing.Description = repair.Description;
-                existing.Cost = repair.Cost;
-                existing.PerformedBy = repair.PerformedBy;
-                existing.RepairDate = repair.RepairDate;
-            }
+            if (existing == null)
+                return await Task.FromResult(false);
 
-            await Task.CompletedTask;
+            existing.Description = repair.Description;
+            existing.Cost = repair.Cost;
+            existing.PerformedBy = repair.PerformedBy;
+            existing.RepairDate = repair.RepairDate;
+
+            return await Task.FromResult(true);
         }
 
-        public async Task DeleteRepairAsync(int id)
+        public async Task<bool> DeleteRepairAsync(int id)
         {
             var repair = _repairs.FirstOrDefault(r => r.Id == id);
 
-            if (repair != null)
-            {
-                _repairs.Remove(repair);
-            }
+            if (repair == null)
+                return await Task.FromResult(false);
 
-            await Task.CompletedTask;
+            _repairs.Remove(repair);
+
+            return await Task.FromResult(true);
         }
+
 
     }
 }

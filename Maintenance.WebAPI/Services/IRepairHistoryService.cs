@@ -8,8 +8,9 @@ namespace Maintenance.WebAPI.Services
     {
         Task<List<RepairHistoryDto>> GetByVehicleIdAsync(int vehicleId);
         Task AddRepairAsync(RepairHistoryDto repair);
-        Task UpdateRepairAsync(int id, RepairHistoryDto repair);
-        Task DeleteRepairAsync(int id);
+        Task<bool> UpdateRepairAsync(int id, RepairHistoryDto repair);
+        Task<bool> DeleteRepairAsync(int id);
+
 
     }
 }

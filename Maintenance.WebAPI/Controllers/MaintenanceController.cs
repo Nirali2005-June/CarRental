@@ -57,7 +57,10 @@ namespace Maintenance.WebAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            await _service.UpdateRepairAsync(id, repair);
+            var updated = await _service.UpdateRepairAsync(id, repair);
+
+            if (!updated)
+                return NotFound($"Repair with id {id} not found.");
 
             return NoContent();
         }
@@ -65,10 +68,14 @@ namespace Maintenance.WebAPI.Controllers
         [HttpDelete("repairs/{id}")]
         public async Task<IActionResult> DeleteRepair(int id)
         {
-            await _service.DeleteRepairAsync(id);
+            var deleted = await _service.DeleteRepairAsync(id);
+
+            if (!deleted)
+                return NotFound($"Repair with id {id} not found.");
 
             return NoContent();
         }
+
 
 
     }
