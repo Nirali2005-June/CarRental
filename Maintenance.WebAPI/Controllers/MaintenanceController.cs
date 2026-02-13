@@ -10,14 +10,21 @@ namespace Maintenance.WebAPI.Controllers
     {
         private readonly IRepairHistoryService _service;
 
-        public MaintenanceController(IRepairHistoryService service)
+        private readonly ILogger<MaintenanceController> _logger;
+
+        public MaintenanceController(
+        IRepairHistoryService service,
+        ILogger<MaintenanceController> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
         [HttpGet("vehicles/{vehicleId}/repairs")]
         public IActionResult GetByVehicleId(int vehicleId)
         {
+            _logger.LogInformation("Fetching repair history for vehicle {VehicleId}", vehicleId);
+
             if (vehicleId <= 0)
                 return BadRequest("VehicleId must be greater than zero.");
 
@@ -32,6 +39,8 @@ namespace Maintenance.WebAPI.Controllers
         [HttpPost("vehicles/{vehicleId}/repairs")]
         public IActionResult AddRepair(int vehicleId, [FromBody] RepairHistoryDto repair)
         {
+            _logger.LogInformation("Adding repair record for vehicle {VehicleId}", vehicleId);
+
             if (vehicleId <= 0)
                 return BadRequest("Invalid vehicleId.");
 
