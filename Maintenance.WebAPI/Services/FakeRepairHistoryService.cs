@@ -10,13 +10,19 @@ namespace Maintenance.WebAPI.Services
     {
         private readonly List<RepairHistoryDto> _repairs = new();
 
-        public async Task<List<RepairHistoryDto>> GetByVehicleIdAsync(int vehicleId)
+        public async Task<List<RepairHistoryDto>> GetByVehicleIdAsync(int vehicleId,int pageNumber,int pageSize)
         {
-            return await Task.FromResult(
-                _repairs
-                    .Where(r => r.VehicleId == vehicleId)
-                    .ToList());
+            var query = _repairs
+                .Where(r => r.VehicleId == vehicleId);
+
+            var pagedResult = query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            return await Task.FromResult(pagedResult);
         }
+
         public async Task AddRepairAsync(RepairHistoryDto repair)
         {
             repair.Id = _repairs.Count + 1;

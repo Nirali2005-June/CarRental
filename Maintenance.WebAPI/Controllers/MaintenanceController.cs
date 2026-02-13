@@ -22,18 +22,25 @@ namespace Maintenance.WebAPI.Controllers
         }
 
         [HttpGet("vehicles/{vehicleId}/repairs")]
-        public async Task<IActionResult> GetByVehicleId(int vehicleId)
+        public async Task<IActionResult> GetByVehicleId(int vehicleId,int pageNumber = 1,int pageSize = 10)
         {
             if (vehicleId <= 0)
                 return BadRequest("VehicleId must be greater than zero.");
 
-            var result = await _service.GetByVehicleIdAsync(vehicleId);
+            if (pageNumber <= 0 || pageSize <= 0)
+                return BadRequest("Invalid pagination values.");
+
+            var result = await _service.GetByVehicleIdAsync(
+                vehicleId,
+                pageNumber,
+                pageSize);
 
             if (result == null || result.Count == 0)
                 return NotFound("No repair history found for this vehicle.");
 
             return Ok(result);
         }
+
 
         [HttpPost("vehicles/{vehicleId}/repairs")]
         public async Task<IActionResult> AddRepair(int vehicleId, [FromBody] RepairHistoryDto repair)
