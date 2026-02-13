@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Maintenance.WebAPI.Models;
 using Maintenance.WebAPI.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Maintenance.WebAPI.Controllers
 {
@@ -19,6 +20,16 @@ namespace Maintenance.WebAPI.Controllers
         {
             var result = _service.GetByVehicleId(vehicleId);
             return Ok(result);
+        }
+
+        [HttpPost("vehicles/{vehicleId}/repairs")]
+        public IActionResult AddRepair(int vehicleId, [FromBody] RepairHistoryDto repair)
+        {
+            repair.VehicleId = vehicleId;
+
+            _service.AddRepair(repair);
+
+            return Ok(repair);
         }
 
 
