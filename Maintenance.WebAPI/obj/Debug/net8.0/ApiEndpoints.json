@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "Maintenance.WebAPI.Controllers.MaintenanceController",
-    "Method": "GetByVehicleId",
-    "RelativePath": "api/Maintenance/vehicles/{vehicleId}/repairs",
+    "Method": "GetRepairHistory",
+    "RelativePath": "api/maintenance/vehicles/{vehicleId}/repairs",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

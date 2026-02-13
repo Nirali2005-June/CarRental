@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("8927978_Nirali_CarRentalApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f978ee02b9e3d76810361d3c1f38ad2e286e6d8f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+729d464707be5841243a5645c42c5d2b21a5f6dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("8927978_Nirali_CarRentalApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("8927978_Nirali_CarRentalApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

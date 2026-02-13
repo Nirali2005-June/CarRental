@@ -240,6 +240,7 @@ C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalAppl
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\8927978_Nirali_CarRentalApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\8927978_Nirali_CarRentalApplication.RazorAssemblyInfo.cache
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\8927978_Nirali_CarRentalApplication.RazorAssemblyInfo.cs
+C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\8927978_Nirali_CarRentalApplication.sourcelink.json
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -257,4 +258,3 @@ C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalAppl
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\8927978_Nirali_CarRentalApplication.pdb
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\8927978_Nirali_CarRentalApplication.genruntimeconfig.cache
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\ref\8927978_Nirali_CarRentalApplication.dll
-C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\8927978_Nirali_CarRentalApplication\obj\Debug\net8.0\8927978_Nirali_CarRentalApplication.sourcelink.json

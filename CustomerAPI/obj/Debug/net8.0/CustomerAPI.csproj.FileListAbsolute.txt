@@ -237,6 +237,7 @@ C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalAppl
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.csproj.CoreCompileInputs.cache
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.sourcelink.json
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -252,4 +253,3 @@ C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalAppl
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.pdb
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.genruntimeconfig.cache
 C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\ref\CustomerAPI.dll
-C:\Users\vasan\OneDrive\Desktop\Distributed App Dev\8927978_Nirali_CarRentalApplication\CustomerAPI\obj\Debug\net8.0\CustomerAPI.sourcelink.json

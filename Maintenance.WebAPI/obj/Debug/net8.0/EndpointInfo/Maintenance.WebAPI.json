@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Maintenance/vehicles/{vehicleId}/repairs": {
+    "/api/maintenance/vehicles/{vehicleId}/repairs": {
       "get": {
         "tags": [
           "Maintenance"

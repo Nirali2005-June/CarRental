@@ -1,63 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Maintenance.WebAPI.Models;
 
 namespace Maintenance.WebAPI.Services
 {
     public class FakeRepairHistoryService : IRepairHistoryService
     {
-        private readonly List<RepairHistoryDto> _repairs = new();
-
-        public async Task<List<RepairHistoryDto>> GetByVehicleIdAsync(int vehicleId,int pageNumber,int pageSize)
+        public List<RepairHistoryDto> GetByVehicleId(int vehicleId)
         {
-            var query = _repairs
-                .Where(r => r.VehicleId == vehicleId);
-
-            var pagedResult = query
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
-                .ToList();
-
-            return await Task.FromResult(pagedResult);
+            return new List<RepairHistoryDto>
+            {
+                new RepairHistoryDto
+                {
+                    Id = 1,
+                    VehicleId = vehicleId,
+                    RepairDate = DateTime.Now.AddDays(-10),
+                    Description = "Oil change",
+                    Cost = 89.99m,
+                    PerformedBy = "Quick Lube"
+                },
+                new RepairHistoryDto
+                {
+                    Id = 2,
+                    VehicleId = vehicleId,
+                    RepairDate = DateTime.Now.AddDays(-40),
+                    Description = "Brake pad replacement",
+                    Cost = 350.00m,
+                    PerformedBy = "Auto Repair Pro"
+                }
+            };
         }
-
-        public async Task AddRepairAsync(RepairHistoryDto repair)
-        {
-            repair.Id = _repairs.Count + 1;
-            _repairs.Add(repair);
-
-            await Task.CompletedTask;
-        }
-
-        public async Task<bool> UpdateRepairAsync(int id, RepairHistoryDto repair)
-        {
-            var existing = _repairs.FirstOrDefault(r => r.Id == id);
-
-            if (existing == null)
-                return await Task.FromResult(false);
-
-            existing.Description = repair.Description;
-            existing.Cost = repair.Cost;
-            existing.PerformedBy = repair.PerformedBy;
-            existing.RepairDate = repair.RepairDate;
-
-            return await Task.FromResult(true);
-        }
-
-        public async Task<bool> DeleteRepairAsync(int id)
-        {
-            var repair = _repairs.FirstOrDefault(r => r.Id == id);
-
-            if (repair == null)
-                return await Task.FromResult(false);
-
-            _repairs.Remove(repair);
-
-            return await Task.FromResult(true);
-        }
-
-
     }
 }
