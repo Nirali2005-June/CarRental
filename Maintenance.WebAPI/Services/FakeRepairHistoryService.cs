@@ -30,5 +30,9 @@ namespace Maintenance.WebAPI.Services
                 }
             };
         }
+        public void AddRepair(RepairHistoryDto repair)
+        {
+            
+        }
     }
 }
